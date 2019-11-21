@@ -1,0 +1,32 @@
+<h1>Emails#index</h1>
+
+<a href="/emails" data-method="post" class="btn-success" data-remote="true">recevoir un email</a>
+
+<table class=" table-bordered" style="width:100%">
+	<thead>
+		<tr>
+			<td>Liste des emails</td>
+			<td>Email sélectionné</td>
+		</tr>
+	</thead>
+		
+	<tbody>
+		<%test = true%>
+		<%@emails.each do |email|%>
+			<%if email.read == true%>
+				<tr id="<%=email.id%>" class="mark">
+			<%else%>
+				<tr id="<%=email.id%>">
+			<%end%>
+				<td class="click-me"><a href="<%= email_path(email.id)%>" data-remote="true"><%=email.object%></a></td>
+				<%if test == true%>
+					<td rowspan="<%= @emails.length %>" id = "viemMail" style="position: absolute; background-color: #ccc; width:50%; padding: 50px 0px;"></td>
+					<%test=false%>
+				<%end%>
+			</tr>
+		<%end%>
+	</tbody>
+
+
+</table>
+

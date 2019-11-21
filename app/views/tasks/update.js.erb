@@ -1,0 +1,6 @@
+if (<%=@task.status%> === true){
+	document.getElementById("<%=@task.id%>").setAttribute("class","text-barre");	
+}
+else{
+	document.getElementById("<%=@task.id%>").setAttribute("class","");	
+}

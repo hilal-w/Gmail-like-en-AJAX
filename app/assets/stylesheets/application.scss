@@ -1,0 +1,14 @@
+@import "variables/personal_variables";
+@import "variables/bootstrap_variables";
+
+@import "bootstrap";
+@import "font-awesome";
+@import "components/*";
+
+.text-barre{
+	text-decoration : line-through;
+}
+
+.mark{
+	background-color: #BDBFBE;
+}

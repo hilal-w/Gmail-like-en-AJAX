@@ -1,0 +1,5 @@
+document.getElementById("viemMail").innerHTML="";
+
+document.getElementById("viemMail").insertAdjacentHTML("beforeend", "<%= j render 'show_ajax', email: @email %>");
+
+document.getElementById("<%=@email.id%>").setAttribute("class","mark");

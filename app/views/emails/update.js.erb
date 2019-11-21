@@ -1,0 +1,8 @@
+if( <%=@email.read ==false %>){
+	document.getElementById("<%=@email.id%>").setAttribute("class","");
+	document.getElementById("google").textContent = "Marquer comme lu";
+}
+else{
+	document.getElementById("<%=@email.id%>").setAttribute("class","mark");
+	document.getElementById("google").textContent = "Marquer comme non-lu";	
+}

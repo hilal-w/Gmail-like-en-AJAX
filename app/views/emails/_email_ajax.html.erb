@@ -1,0 +1,9 @@
+	<%if email.read == true%>
+				<tr id="<%=email.id%>" class="mark">
+			<%else%>
+				<tr id="<%=email.id%>">
+			<%end%>
+
+
+	<td class="click-me"><a href="<%= email_path(email.id)%>" data-remote="true"><%=email.object%></a></td>
+</tr>
